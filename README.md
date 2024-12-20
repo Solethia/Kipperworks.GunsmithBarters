@@ -14,7 +14,7 @@ The following barters are added.
 | SKS TAPCO Intrafuse buffer tube | 1xPack of Russian Army pineapple juice | Jaeger LVL1 |  |
 | SKS TAPCO Intrafuse SAW-Style pistol grip | 1xWilston cigarettes | Jaeger LVL1 |  |
 | SKS Hexagon 7.62x39 sound suppressor | 1xElectric motor | Skier LVL3 |  |
-| M870 12ga 508mm barrel | 2xStrike Cigarettes, 2xWilston cigarettes | Skier LVL3 |  |
+| M870 12ga 508mm barrel | 2xStrike Cigarettes, 2xWilston cigarettes | Mechanic LVL1 |  |
 | ME Cylinder 12ga muzzle adapter | 1xCan of pacific saury | Jaeger LVL1 |  |
 | GK-02 12ga muzzle brake | 1xElectronic components, 1xPrinted circuit board | Jaeger LVL2 |  |
 | Fortis Shift tactical foregrip | 1xWooden clock | Mechanic LVL4 |  |

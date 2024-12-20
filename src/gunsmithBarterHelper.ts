@@ -140,8 +140,8 @@ export class GunsmithBarterHelper
             .addBuyRestriction(1)
             .addBarterCost(strikeCigaretts, 2)
             .addBarterCost(wilstonCigarettes, 2)
-            .addLoyaltyLevel(3)
-            .export(this.traders.skier);
+            .addLoyaltyLevel(1)
+            .export(this.traders.mechanic);
 
         const cylinderTwelveGagueMuzzleAdapter = "5c0111ab0db834001966914d";
         const saury = "5673de654bdc2d180f8b456d";
