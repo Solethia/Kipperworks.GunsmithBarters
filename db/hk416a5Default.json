@@ -1,0 +1,95 @@
+{
+    "items": [
+        {
+            "_id": "kip-hk416a5default",
+            "_tpl": "5bb2475ed4351e00853264e3",
+            "upd": {
+                "Repairable": {
+                    "MaxDurability": 100,
+                    "Durability": 100
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        },
+        {
+            "_id": "kip-hk416a5default-pistolgrip",
+            "_tpl": "5bb20e0ed4351e3bac1212dc",
+            "slotId": "mod_pistol_grip",
+            "parentId": "kip-hk416a5default"
+        },
+        {
+            "_id": "kip-hk416a5default-magazine",
+            "_tpl": "5c05413a0db834001c390617",
+            "slotId": "mod_magazine",
+            "parentId": "kip-hk416a5default"
+        },
+        {
+            "_id": "kip-hk416a5default-reciever",
+            "_tpl": "5bb20d53d4351e4502010a69",
+            "slotId": "mod_reciever",
+            "parentId": "kip-hk416a5default"
+        },
+        {
+            "_id": "kip-hk416a5default-stock",
+            "_tpl": "5bb20e58d4351e00320205d7",
+            "slotId": "mod_stock",
+            "parentId": "kip-hk416a5default"
+        },
+        {
+            "_id": "kip-hk416a5default-charge",
+            "_tpl": "5bb20dbcd4351e44f824c04e",
+            "slotId": "mod_charge",
+            "parentId": "kip-hk416a5default"
+        },
+        {
+            "_id": "kip-hk416a5default-barrel",
+            "_tpl": "5bb20d9cd4351e00334c9d8a",
+            "slotId": "mod_barrel",
+            "parentId": "kip-hk416a5default-reciever"
+        },
+        {
+            "_id": "kip-hk416a5default-handguard",
+            "_tpl": "5bb20de5d4351e0035629e59",
+            "slotId": "mod_handguard",
+            "parentId": "kip-hk416a5default-reciever"
+        },
+        {
+            "_id": "kip-hk416a5default-sightrear",
+            "_tpl": "5bb20e49d4351e3bac1212de",
+            "slotId": "mod_sight_rear",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            },
+            "parentId": "kip-hk416a5default-reciever"
+        },
+        {
+            "_id": "kip-hk416a5default-stock000",
+            "_tpl": "5bb20e70d4351e0035629f8f",
+            "slotId": "mod_stock_000",
+            "parentId": "kip-hk416a5default-stock"
+        },
+        {
+            "_id": "kip-hk416a5default-muzzle",
+            "_tpl": "544a38634bdc2d58388b4568",
+            "slotId": "mod_muzzle",
+            "parentId": "kip-hk416a5default-barrel"
+        },
+        {
+            "_id": "kip-hk416a5default-gasblock",
+            "_tpl": "5bb20dcad4351e3bac1212da",
+            "slotId": "mod_gas_block",
+            "parentId": "kip-hk416a5default-barrel"
+        }
+    ]
+}

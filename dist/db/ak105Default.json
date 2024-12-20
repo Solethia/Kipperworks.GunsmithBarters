@@ -1,0 +1,80 @@
+{
+    "items": [
+        {
+            "_id": "kip-ak105default",
+            "_tpl": "5ac66d9b5acfc4001633997a",
+            "upd": {
+                "Repairable": {
+                    "MaxDurability": 100,
+                    "Durability": 100
+                },
+                "Foldable": {
+                    "Folded": false
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        },
+        {
+            "_id": "kip-ak105default-gasblock",
+            "_tpl": "59c6633186f7740cf0493bb9",
+            "slotId": "mod_gas_block",
+            "parentId": "kip-ak105default"
+        },
+        {
+            "_id": "kip-ak105default-muzzle",
+            "_tpl": "5ac72e945acfc43f3b691116",
+            "slotId": "mod_muzzle",
+            "parentId": "kip-ak105default"
+        },
+        {
+            "_id": "kip-ak105default-pistolgrip",
+            "_tpl": "5649ade84bdc2d1b2b8b4587",
+            "slotId": "mod_pistol_grip",
+            "parentId": "kip-ak105default"
+        },
+        {
+            "_id": "kip-ak105default-reciever",
+            "_tpl": "5ac50da15acfc4001718d287",
+            "slotId": "mod_reciever",
+            "parentId": "kip-ak105default"
+        },
+        {
+            "_id": "kip-ak105default-sightrear",
+            "_tpl": "5ac733a45acfc400192630e2",
+            "slotId": "mod_sight_rear",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            },
+            "parentId": "kip-ak105default"
+        },
+        {
+            "_id": "kip-ak105default-stock",
+            "_tpl": "5ac50c185acfc400163398d4",
+            "slotId": "mod_stock",
+            "parentId": "kip-ak105default"
+        },
+        {
+            "_id": "kip-ak105default-magazine",
+            "_tpl": "55d480c04bdc2d1d4e8b456a",
+            "slotId": "mod_magazine",
+            "parentId": "kip-ak105default"
+        },
+        {
+            "_id": "kip-ak105default-handguard",
+            "_tpl": "5648b1504bdc2d9d488b4584",
+            "slotId": "mod_handguard",
+            "parentId": "kip-ak105default-gasblock"
+        }
+    ]
+}

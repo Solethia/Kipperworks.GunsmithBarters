@@ -1,0 +1,98 @@
+{
+    "items": [
+        {
+            "_id": "kip-krissvector9x19default",
+            "_tpl": "5fc3f2d5900b1d5091531e57",
+            "upd": {
+                "Repairable": {
+                    "MaxDurability": 100,
+                    "Durability": 100
+                },
+                "Foldable": {
+                    "Folded": false
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        },
+        {
+            "_id": "kip-krissvector9x19default-magazine",
+            "_tpl": "5a718b548dc32e000d46d262",
+            "slotId": "mod_magazine",
+            "parentId": "kip-krissvector9x19default"
+        },
+        {
+            "_id": "kip-krissvector9x19default-sightfront",
+            "_tpl": "5fb6567747ce63734e3fa1dc",
+            "slotId": "mod_sight_front",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            },
+            "parentId": "kip-krissvector9x19default"
+        },
+        {
+            "_id": "kip-krissvector9x19default-sightrear",
+            "_tpl": "5fb6564947ce63734e3fa1da",
+            "slotId": "mod_sight_rear",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            },
+            "parentId": "kip-krissvector9x19default"
+        },
+        {
+            "_id": "kip-krissvector9x19default-stock",
+            "_tpl": "5fb6558ad6f0b2136f2d7eb7",
+            "slotId": "mod_stock",
+            "parentId": "kip-krissvector9x19default"
+        },
+        {
+            "_id": "kip-krissvector9x19default-barrel",
+            "_tpl": "5fbbc366ca32ed67276c1557",
+            "slotId": "mod_barrel",
+            "parentId": "kip-krissvector9x19default"
+        },
+        {
+            "_id": "kip-krissvector9x19default-mount",
+            "_tpl": "5fbb976df9986c4cff3fe5f2",
+            "slotId": "mod_mount",
+            "parentId": "kip-krissvector9x19default"
+        },
+        {
+            "_id": "kip-krissvector9x19default-mount001",
+            "_tpl": "5fce0f9b55375d18a253eff2",
+            "slotId": "mod_mount_001",
+            "parentId": "kip-krissvector9x19default"
+        },
+        {
+            "_id": "kip-krissvector9x19default-mount002",
+            "_tpl": "5fce0f9b55375d18a253eff2",
+            "slotId": "mod_mount_002",
+            "parentId": "kip-krissvector9x19default"
+        },
+        {
+            "_id": "kip-krissvector9x19default-muzzle",
+            "_tpl": "5fbbc34106bde7524f03cbe9",
+            "slotId": "mod_muzzle",
+            "parentId": "kip-krissvector9x19default-barrel"
+        }
+    ]
+}

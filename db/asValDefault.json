@@ -1,0 +1,74 @@
+{
+    "items": [
+        {
+            "_id": "kip-asvaldefault",
+            "_tpl": "57c44b372459772d2b39b8ce",
+            "upd": {
+                "Repairable": {
+                    "MaxDurability": 100,
+                    "Durability": 100
+                },
+                "Foldable": {
+                    "Folded": false
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        },
+        {
+            "_id": "kip-asvaldefault-muzzle",
+            "_tpl": "57c44dd02459772d2e0ae249",
+            "slotId": "mod_muzzle",
+            "parentId": "kip-asvaldefault"
+        },
+        {
+            "_id": "kip-asvaldefault-reciever",
+            "_tpl": "57c44f4f2459772d2c627113",
+            "slotId": "mod_reciever",
+            "parentId": "kip-asvaldefault"
+        },
+        {
+            "_id": "kip-asvaldefault-magazine",
+            "_tpl": "57838f9f2459774a150289a0",
+            "slotId": "mod_magazine",
+            "parentId": "kip-asvaldefault"
+        },
+        {
+            "_id": "kip-asvaldefault-pistolgrip",
+            "_tpl": "57c44fa82459772d2d75e415",
+            "slotId": "mod_pistol_grip",
+            "parentId": "kip-asvaldefault"
+        },
+        {
+            "_id": "kip-asvaldefault-stock",
+            "_tpl": "57c450252459772d28133253",
+            "slotId": "mod_stock",
+            "parentId": "kip-asvaldefault"
+        },
+        {
+            "_id": "kip-asvaldefault-handguard",
+            "_tpl": "651178336cad06c37c049eb4",
+            "slotId": "mod_handguard",
+            "parentId": "kip-asvaldefault"
+        },
+        {
+            "_id": "kip-asvaldefault-sightrear",
+            "_tpl": "57c44e7b2459772d28133248",
+            "slotId": "mod_sight_rear",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            },
+            "parentId": "kip-asvaldefault-muzzle"
+        }
+    ]
+}

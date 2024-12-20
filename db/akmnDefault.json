@@ -1,0 +1,77 @@
+{
+    "items": [
+        {
+            "_id": "kip-akmndefault",
+            "_tpl": "5a0ec13bfcdbcb00165aa685",
+            "upd": {
+                "Repairable": {
+                    "MaxDurability": 100,
+                    "Durability": 100
+                },
+                "FireMode": {
+                    "FireMode": "single"
+                }
+            }
+        },
+        {
+            "_id": "kip-akmndefault-gasblock",
+            "_tpl": "59d64ec286f774171d1e0a42",
+            "slotId": "mod_gas_block",
+            "parentId": "kip-akmndefault"
+        },
+        {
+            "_id": "kip-akmndefault-muzzle",
+            "_tpl": "59d64fc686f774171b243fe2",
+            "slotId": "mod_muzzle",
+            "parentId": "kip-akmndefault"
+        },
+        {
+            "_id": "kip-akmndefault-pistolgrip",
+            "_tpl": "59e62cc886f77440d40b52a1",
+            "slotId": "mod_pistol_grip",
+            "parentId": "kip-akmndefault"
+        },
+        {
+            "_id": "kip-akmndefault-reciever",
+            "_tpl": "59d6507c86f7741b846413a2",
+            "slotId": "mod_reciever",
+            "parentId": "kip-akmndefault"
+        },
+        {
+            "_id": "kip-akmndefault-sightrear",
+            "_tpl": "59d650cf86f7741b846413a4",
+            "slotId": "mod_sight_rear",
+            "upd": {
+                "Sight": {
+                    "ScopesCurrentCalibPointIndexes": [
+                        0
+                    ],
+                    "ScopesSelectedModes": [
+                        0
+                    ],
+                    "SelectedScope": 0,
+                    "ScopeZoomValue": 0
+                }
+            },
+            "parentId": "kip-akmndefault"
+        },
+        {
+            "_id": "kip-akmndefault-stock",
+            "_tpl": "59d6514b86f774171a068a08",
+            "slotId": "mod_stock",
+            "parentId": "kip-akmndefault"
+        },
+        {
+            "_id": "kip-akmndefault-magazine",
+            "_tpl": "5a01c29586f77474660c694c",
+            "slotId": "mod_magazine",
+            "parentId": "kip-akmndefault"
+        },
+        {
+            "_id": "kip-akmndefault-handguard",
+            "_tpl": "59d64f2f86f77417193ef8b3",
+            "slotId": "mod_handguard",
+            "parentId": "kip-akmndefault-gasblock"
+        }
+    ]
+}
