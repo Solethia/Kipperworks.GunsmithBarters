@@ -1,4 +1,4 @@
-# Welcome to the SPT Modding Project
+# Welcome to Gunsmith Barters
 The purpose of Gunsmith Barters is to add guns and attachments required for gunsmith, primarily to make gunsmith quests easier to do on hardcore runs. If you in general just want more barters this mod will also fill that niche. This mod works well with mods that remove non-barters like Hardcore Rules or similar. In an attempt to maintain the spirit of hardcore an attempt to make the barter cost balanced was made. Feel free to give feedback on incorrect, missing or unbalanced entries.
 
 The following barters are added.
