@@ -1,7 +1,7 @@
 {
-    "name": "kipperwork.gunsmith-barters",
-    "version": "1.0.6",
-    "sptVersion": "~3.9",
+    "name": "gunsmith-barters",
+    "version": "1.0.8",
+    "sptVersion": "~3.10",
     "loadBefore": [],
     "loadAfter": [],
     "incompatibilities": [],

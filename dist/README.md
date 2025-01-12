@@ -1,5 +1,5 @@
-# Welcome to the SPT Modding Project
-The purpose of Gunsmith Barters is to add guns and attachments required for gunsmith, primarily to make gunsmith quests easier to do on hardcore runs. In an attempt to maintain the spirit of hardcore an attempt to make the barter cost balanced was made. Feel free to give feedback on incorrect, missing or unbalanced entries.
+# Welcome to Gunsmith Barters
+The purpose of Gunsmith Barters is to add guns and attachments required for gunsmith, primarily to make gunsmith quests easier to do on hardcore runs. If you in general just want more barters this mod will also fill that niche. This mod works well with mods that remove non-barters like Hardcore Rules or similar. In an attempt to maintain the spirit of hardcore an attempt to make the barter cost balanced was made. Feel free to give feedback on incorrect, missing or unbalanced entries.
 
 The following barters are added.
 
@@ -14,7 +14,7 @@ The following barters are added.
 | SKS TAPCO Intrafuse buffer tube | 1xPack of Russian Army pineapple juice | Jaeger LVL1 |  |
 | SKS TAPCO Intrafuse SAW-Style pistol grip | 1xWilston cigarettes | Jaeger LVL1 |  |
 | SKS Hexagon 7.62x39 sound suppressor | 1xElectric motor | Skier LVL3 |  |
-| M870 12ga 508mm barrel | 2xStrike Cigarettes, 2xWilston cigarettes | Skier LVL3 |  |
+| M870 12ga 508mm barrel | 2xStrike Cigarettes, 2xWilston cigarettes | Mechanic LVL1 |  |
 | ME Cylinder 12ga muzzle adapter | 1xCan of pacific saury | Jaeger LVL1 |  |
 | GK-02 12ga muzzle brake | 1xElectronic components, 1xPrinted circuit board | Jaeger LVL2 |  |
 | Fortis Shift tactical foregrip | 1xWooden clock | Mechanic LVL4 |  |

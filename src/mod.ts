@@ -21,7 +21,7 @@ class GunsmithBarters implements IPreSptLoadMod, IPostDBLoadMod
 
     constructor()
     {
-        this.mod = "Kipperworks.GunsmithBarters"; // Set name of mod so we can log it to console later
+        this.mod = "GunsmithBarters"; // Set name of mod so we can log it to console later
     }
 
     /**
