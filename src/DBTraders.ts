@@ -40,7 +40,7 @@ export class DBTraders
         if (this._peacekeeper)
             return this._peacekeeper;
 
-        this._peacekeeper = this._tables.traders["5a7c2eca46aef81a7ca2145d"];
+        this._peacekeeper = this._tables.traders["5935c25fb3acc3127c3d8cd9"];
         return this._peacekeeper;
     }
 
@@ -49,7 +49,7 @@ export class DBTraders
         if (this._mechanic)
             return this._mechanic;
 
-        this._mechanic = this._tables.traders["5c0647fdd443bc2504c2d371"];
+        this._mechanic = this._tables.traders["5a7c2eca46aef81a7ca2145d"];
         return this._mechanic;
     }
 
