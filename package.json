@@ -1,6 +1,6 @@
 {
     "name": "gunsmith-barters",
-    "version": "1.0.8",
+    "version": "1.1.0",
     "sptVersion": "~3.10",
     "loadBefore": [],
     "loadAfter": [],
