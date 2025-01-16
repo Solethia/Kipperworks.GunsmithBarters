@@ -1,4 +1,4 @@
-import { Item } from "@spt/models/eft/common/tables/IItem";
+import { IItem } from "@spt/models/eft/common/tables/IItem";
 import * as ask74nDefaultJson from "../db/aks74nDefault.json";
 import * as ak102DefaultJson from "../db/ak102Default.json";
 import * as ak105DefaultJson from "../db/ak105Default.json";
@@ -9,38 +9,38 @@ import * as asValDefaultJson from "../db/asValDefault.json";
 
 export class GunBuilder
 {
-    public getAks74nDefault(): Item[]
+    public getAks74nDefault(): IItem[]
     {
-        return ask74nDefaultJson.items as Item[];
+        return ask74nDefaultJson.items as IItem[];
     }
 
-    public getAk102Default(): Item[]
+    public getAk102Default(): IItem[]
     {
-        return ak102DefaultJson.items as Item[];
+        return ak102DefaultJson.items as IItem[];
     }
 
-    public getAk105Default(): Item[]
+    public getAk105Default(): IItem[]
     {
-        return ak105DefaultJson.items as Item[];
+        return ak105DefaultJson.items as IItem[];
     }
 
-    public getAkmnDefault(): Item[]
+    public getAkmnDefault(): IItem[]
     {
-        return akmnDefaultJson.items as Item[];
+        return akmnDefaultJson.items as IItem[];
     }
 
-    public getKrissVector19x9Default(): Item[]
+    public getKrissVector19x9Default(): IItem[]
     {
-        return krissVector9x19DefaultJson.items as Item[];
+        return krissVector9x19DefaultJson.items as IItem[];
     }
 
-    public getHk416a5Default(): Item[]
+    public getHk416a5Default(): IItem[]
     {
-        return hk416a5DefaultJson.items as Item[];
+        return hk416a5DefaultJson.items as IItem[];
     }
 
-    public getAsValDefault(): Item[]
+    public getAsValDefault(): IItem[]
     {
-        return asValDefaultJson.items as Item[];
+        return asValDefaultJson.items as IItem[];
     }
 }

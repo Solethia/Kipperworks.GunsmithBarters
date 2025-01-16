@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "_id": "kip-aks74ndefault",
+            "_id": "67895e3ed549ac3dab0e7fbd",
             "_tpl": "5ab8e9fcd8ce870019439434",
             "upd": {
                 "Repairable": {
@@ -17,31 +17,31 @@
             }
         },
         {
-            "_id": "kip-aks74ndefault-gasblock",
+            "_id": "67895e3ed549ac3dab0e7fbe",
             "_tpl": "59c6633186f7740cf0493bb9",
             "slotId": "mod_gas_block",
-            "parentId": "kip-aks74ndefault"
+            "parentId": "67895e3ed549ac3dab0e7fbd"
         },
         {
-            "_id": "kip-aks74ndefault-muzzle",
+            "_id": "67895e3ed549ac3dab0e7fbf",
             "_tpl": "5649aa744bdc2ded0b8b457e",
             "slotId": "mod_muzzle",
-            "parentId": "kip-aks74ndefault"
+            "parentId": "67895e3ed549ac3dab0e7fbd"
         },
         {
-            "_id": "kip-aks74ndefault-pistolgrip",
+            "_id": "67895e3ed549ac3dab0e7fc0",
             "_tpl": "57e3dba62459770f0c32322b",
             "slotId": "mod_pistol_grip",
-            "parentId": "kip-aks74ndefault"
+            "parentId": "67895e3ed549ac3dab0e7fbd"
         },
         {
-            "_id": "kip-aks74ndefault-reciever",
+            "_id": "67895e3ed549ac3dab0e7fc1",
             "_tpl": "5649af094bdc2df8348b4586",
             "slotId": "mod_reciever",
-            "parentId": "kip-aks74ndefault"
+            "parentId": "67895e3ed549ac3dab0e7fbd"
         },
         {
-            "_id": "kip-aks74ndefault-sightrear",
+            "_id": "67895e3ed549ac3dab0e7fc2",
             "_tpl": "5649b0544bdc2d1b2b8b458a",
             "slotId": "mod_sight_rear",
             "upd": {
@@ -56,25 +56,25 @@
                     "ScopeZoomValue": 0
                 }
             },
-            "parentId": "kip-aks74ndefault"
+            "parentId": "67895e3ed549ac3dab0e7fbd"
         },
         {
-            "_id": "kip-aks74ndefault-stock",
+            "_id": "67895e3ed549ac3dab0e7fc3",
             "_tpl": "5ab626e4d8ce87272e4c6e43",
             "slotId": "mod_stock",
-            "parentId": "kip-aks74ndefault"
+            "parentId": "67895e3ed549ac3dab0e7fbd"
         },
         {
-            "_id": "kip-aks74ndefault-magazine",
+            "_id": "67895e3ed549ac3dab0e7fc4",
             "_tpl": "564ca99c4bdc2d16268b4589",
             "slotId": "mod_magazine",
-            "parentId": "kip-aks74ndefault"
+            "parentId": "67895e3ed549ac3dab0e7fbd"
         },
         {
-            "_id": "kip-aks74ndefault-handguard",
+            "_id": "67895e3ed549ac3dab0e7fc5",
             "_tpl": "5648b0744bdc2d363b8b4578",
             "slotId": "mod_handguard",
-            "parentId": "kip-aks74ndefault-gasblock"
+            "parentId": "67895e3ed549ac3dab0e7fbe"
         }
     ]
 }

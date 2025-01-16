@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "_id": "kip-asvaldefault",
+            "_id": "67895eb3d549ac3dab0e7fce",
             "_tpl": "57c44b372459772d2b39b8ce",
             "upd": {
                 "Repairable": {
@@ -17,43 +17,43 @@
             }
         },
         {
-            "_id": "kip-asvaldefault-muzzle",
+            "_id": "67895eb3d549ac3dab0e7fcf",
             "_tpl": "57c44dd02459772d2e0ae249",
             "slotId": "mod_muzzle",
-            "parentId": "kip-asvaldefault"
+            "parentId": "67895eb3d549ac3dab0e7fce"
         },
         {
-            "_id": "kip-asvaldefault-reciever",
+            "_id": "67895eb3d549ac3dab0e7fd0",
             "_tpl": "57c44f4f2459772d2c627113",
             "slotId": "mod_reciever",
-            "parentId": "kip-asvaldefault"
+            "parentId": "67895eb3d549ac3dab0e7fce"
         },
         {
-            "_id": "kip-asvaldefault-magazine",
+            "_id": "67895eb3d549ac3dab0e7fd1",
             "_tpl": "57838f9f2459774a150289a0",
             "slotId": "mod_magazine",
-            "parentId": "kip-asvaldefault"
+            "parentId": "67895eb3d549ac3dab0e7fce"
         },
         {
-            "_id": "kip-asvaldefault-pistolgrip",
+            "_id": "67895eb3d549ac3dab0e7fd2",
             "_tpl": "57c44fa82459772d2d75e415",
             "slotId": "mod_pistol_grip",
-            "parentId": "kip-asvaldefault"
+            "parentId": "67895eb3d549ac3dab0e7fce"
         },
         {
-            "_id": "kip-asvaldefault-stock",
+            "_id": "67895eb3d549ac3dab0e7fd3",
             "_tpl": "57c450252459772d28133253",
             "slotId": "mod_stock",
-            "parentId": "kip-asvaldefault"
+            "parentId": "67895eb3d549ac3dab0e7fce"
         },
         {
-            "_id": "kip-asvaldefault-handguard",
+            "_id": "67895eb3d549ac3dab0e7fd4",
             "_tpl": "651178336cad06c37c049eb4",
             "slotId": "mod_handguard",
-            "parentId": "kip-asvaldefault"
+            "parentId": "67895eb3d549ac3dab0e7fce"
         },
         {
-            "_id": "kip-asvaldefault-sightrear",
+            "_id": "67895eb3d549ac3dab0e7fd5",
             "_tpl": "57c44e7b2459772d28133248",
             "slotId": "mod_sight_rear",
             "upd": {
@@ -68,7 +68,7 @@
                     "ScopeZoomValue": 0
                 }
             },
-            "parentId": "kip-asvaldefault-muzzle"
+            "parentId": "67895eb3d549ac3dab0e7fcf"
         }
     ]
 }
