@@ -32,9 +32,6 @@ class GunsmithBarters implements IPreSptLoadMod, IPostDBLoadMod
     {
         // Get a logger
         this.logger = container.resolve<ILogger>("WinstonLogger");
-        this.logger.debug(`[${this.mod}] preSpt Loading... `);
-
-        this.logger.debug(`[${this.mod}] preSpt Loaded`);
     }
 
     /**

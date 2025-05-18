@@ -1,10 +1,11 @@
 import { ItemHelper } from "@spt/helpers/ItemHelper";
 import { QuestHelper } from "@spt/helpers/QuestHelper";
 import { IItem } from "@spt/models/eft/common/tables/IItem";
-import { IQuest, IQuestReward } from "@spt/models/eft/common/tables/IQuest";
+import { IReward } from "@spt/models/eft/common/tables/IReward";
+import { IQuest } from "@spt/models/eft/common/tables/IQuest";
 import { IBarterScheme, ITrader } from "@spt/models/eft/common/tables/ITrader";
 import { Money } from "@spt/models/enums/Money";
-import { QuestRewardType } from "@spt/models/enums/QuestRewardType";
+import { RewardType } from "@spt/models/enums/RewardType";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
 import { HashUtil } from "@spt/utils/HashUtil";
 
@@ -174,14 +175,7 @@ export class FluentAssortConstructor
 
             return;
         }
-
-        const itemBeingSoldName = this.itemHelper.getItemName(itemBeingSold._tpl);
-        const barterCostInfo = this.getBarterCostInfo(barterSchemes);
-        const traderInfo = this.getTraderInfo(data, loyaltyLevel);
-        const questRestrictionInfo = this.getQuestRestrictionInfo();
-        const logExport = "| " + itemBeingSoldName + " | " + barterCostInfo + " | " + traderInfo + " | " + questRestrictionInfo + " |";
-        this.logger.info(logExport)
-
+        
         data.assort.items.push(...this.itemsToSell);
         data.assort.barter_scheme[itemBeingSoldId] = barterSchemes;
         data.assort.loyal_level_items[itemBeingSoldId] = loyaltyLevel;
@@ -192,12 +186,10 @@ export class FluentAssortConstructor
             const onQuestSuccessAssort = data.questassort["success"];
             this.questRestrictions.forEach(questRestriction =>
             {
-                this.logger.info("quest restriction id: " + questRestriction._id);
-
                 onQuestSuccessAssort[itemBeingSoldId] = questRestriction._id;
                 const index = questRestriction.rewards.Success.length;
 
-                const questReward: IQuestReward = {
+                const questReward: IReward = {
                     "id": this.hashUtil.generate(),
                     "index": index,
                     "items": [
@@ -209,7 +201,7 @@ export class FluentAssortConstructor
                     "loyaltyLevel": loyaltyLevel,
                     "target": itemBeingSold._id,
                     "traderId": data.base._id,
-                    "type": QuestRewardType.ASSORTMENT_UNLOCK,
+                    "type": RewardType.ASSORTMENT_UNLOCK,
                     "unknown": false
                 };
                 questRestriction.rewards.Success.push(questReward);
@@ -222,6 +214,16 @@ export class FluentAssortConstructor
         this.questRestrictions = [];
 
         return this;
+    }
+
+    private logExport(trader: ITrader, itemBeingSold: IItem, loyaltyLevel: number,  barterSchemes: IBarterScheme[][], onlyShowInConsole: boolean)
+    {
+        const itemBeingSoldName = this.itemHelper.getItemName(itemBeingSold._tpl);
+        const barterCostInfo = this.getBarterCostInfo(barterSchemes);
+        const traderInfo = this.getTraderInfo(trader, loyaltyLevel);
+        const questRestrictionInfo = this.getQuestRestrictionInfo();
+        const logExport = "| " + itemBeingSoldName + " | " + barterCostInfo + " | " + traderInfo + " | " + questRestrictionInfo + " |";
+        this.logger.debug(logExport, onlyShowInConsole)
     }
 
     private getBarterCostInfo(barterSchemes: IBarterScheme[][]): string
