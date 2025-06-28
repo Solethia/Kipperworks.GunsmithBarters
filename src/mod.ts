@@ -53,7 +53,7 @@ class GunsmithBarters implements IPreSptLoadMod, IPostDBLoadMod
         const tables = databaseServer.getTables();
 
         // Create helper class and use it to register our traders image/icon + set its stock refresh time
-        const fluentAssortCreator = new FluentAssortCreator(questHelper, itemHelper, hashUtil, this.logger);
+        const fluentAssortCreator = new FluentAssortCreator(questHelper, itemHelper, hashUtil, this.logger, config.debug);
         const gunsmithBarterHelper = new GunsmithBarterHelper(fluentAssortCreator, tables, config);
 
         gunsmithBarterHelper.addGunsmithOneBarters();

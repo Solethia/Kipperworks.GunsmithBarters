@@ -19,13 +19,15 @@ export class FluentAssortConstructor
     protected itemHelper: ItemHelper;
     protected hashUtil: HashUtil;
     protected logger: ILogger;
+    private debug: boolean;
 
-    constructor(questHelper: QuestHelper, itemHelper: ItemHelper, hashutil: HashUtil, logger: ILogger)
+    constructor(questHelper: QuestHelper, itemHelper: ItemHelper, hashutil: HashUtil, logger: ILogger, debug: boolean = false)
     {
         this.questHelper = questHelper;
         this.itemHelper = itemHelper;
         this.hashUtil = hashutil;
         this.logger = logger;
+        this.debug = debug;
     }
 
     /**
@@ -162,7 +164,7 @@ export class FluentAssortConstructor
      * Reset objet ready for reuse
      * @returns
      */
-    public export(data: ITrader): FluentAssortConstructor
+    public export(data: ITrader, gunsmithQuestName:string): FluentAssortConstructor
     {
         const itemBeingSold = this.itemsToSell[0];
         const itemBeingSoldId = itemBeingSold._id;
@@ -208,6 +210,11 @@ export class FluentAssortConstructor
             });
         }
 
+        if (this.debug)
+        {
+            this.logExport(gunsmithQuestName, data, itemBeingSold, loyaltyLevel, barterSchemes);
+        }
+
         this.itemsToSell = [];
         this.barterScheme = {};
         this.loyaltyLevel = {};
@@ -216,14 +223,14 @@ export class FluentAssortConstructor
         return this;
     }
 
-    private logExport(trader: ITrader, itemBeingSold: IItem, loyaltyLevel: number,  barterSchemes: IBarterScheme[][], onlyShowInConsole: boolean)
+    private logExport(gunsmithQuestName:string, trader: ITrader, itemBeingSold: IItem, loyaltyLevel: number,  barterSchemes: IBarterScheme[][])
     {
         const itemBeingSoldName = this.itemHelper.getItemName(itemBeingSold._tpl);
         const barterCostInfo = this.getBarterCostInfo(barterSchemes);
         const traderInfo = this.getTraderInfo(trader, loyaltyLevel);
         const questRestrictionInfo = this.getQuestRestrictionInfo();
-        const logExport = "| " + itemBeingSoldName + " | " + barterCostInfo + " | " + traderInfo + " | " + questRestrictionInfo + " |";
-        this.logger.debug(logExport, onlyShowInConsole)
+        const logExport = "| " + gunsmithQuestName + " | " + itemBeingSoldName + " | " + barterCostInfo + " | " + traderInfo + " | " + questRestrictionInfo + " |";
+        this.logger.debug(logExport, false);
     }
 
     private getBarterCostInfo(barterSchemes: IBarterScheme[][]): string

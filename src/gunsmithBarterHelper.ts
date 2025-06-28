@@ -23,6 +23,7 @@ export class GunsmithBarterHelper
 
     public addGunsmithOneBarters(): void
     {
+        const questName = "Gunsmith - Part 1";
         if (this.config.addAttachmentBarters)
         {
             const plasticPistolGrip = "56083a334bdc2dc8488b4571";
@@ -33,7 +34,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(ramStick, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.jaeger);
+                .export(this.traders.jaeger, questName);
 
             const ncStarTacticalBlueLaser = "5cc9c20cd7f00c001336c65d";
             const hotrod = "5751496424597720a27126da";
@@ -43,12 +44,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(hotrod, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
     public addGunsmithTwoBarters(): void
     {
+        const questName = "Gunsmith - Part 2";
         if (this.config.addAttachmentBarters)
         {
             const kacVerticalForegrip = "5c87ca002e221600114cb150";
@@ -59,7 +61,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(3)
                 .addBarterCost(flatScrewdriver, 2)
                 .addLoyaltyLevel(1)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
         }
     }
 
@@ -70,6 +72,7 @@ export class GunsmithBarterHelper
 
     public addGunsmithFourBarters(): void
     {
+        const questName = "Gunsmith - Part 4";
         if (this.config.addAttachmentBarters)
         {
             const sksChoateScopeMount = "6415d33eda439c6a97048b5b";
@@ -82,7 +85,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(survLSurvivorLighter, 1)
                 .addBarterCost(crickentlighter, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.jaeger);
+                .export(this.traders.jaeger, questName);
 
             const vomzPiladRiflescope = "5dff772da3651922b360bf91";
             const bottleOfWater = "5448fee04bdc2dbc018b4567";
@@ -92,7 +95,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(bottleOfWater, 2)
                 .addLoyaltyLevel(1)
-                .export(this.traders.jaeger);
+                .export(this.traders.jaeger, questName);
 
             const leapersScopeMount = "5dff77c759400025ea5150cf";
             const hawkGunpowder = "5d6fc87386f77449db3db94e";
@@ -102,7 +105,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(hawkGunpowder, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.jaeger);
+                .export(this.traders.jaeger, questName);
 
 
             const sksTapcoIntrafuseBufferTube = "5afd7e095acfc40017541f61";
@@ -113,7 +116,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(pineappleJuice, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const sksTapcoIntrafuseSawStylePistolGrip = "5afd7e445acfc4001637e35a";
             const wilstonCigarette = "573476f124597737e04bf328";
@@ -123,7 +126,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(wilstonCigarette, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const sksHexagonSoundSupressor = "593d490386f7745ee97a1555";
             const electricMotor = "5d1b2fa286f77425227d1674";
@@ -133,12 +136,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(electricMotor, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
     public addGunsmithFiveBarters(): void
     {
+        const questName = "Gunsmith - Part 5";
         if (this.config.addAttachmentBarters)
         {
             // Already has barter for the gun, but with wrong barrel so we add the barrel
@@ -152,7 +156,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(strikeCigaretts, 2)
                 .addBarterCost(wilstonCigarettes, 2)
                 .addLoyaltyLevel(1)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const cylinderTwelveGagueMuzzleAdapter = "5c0111ab0db834001966914d";
             const saury = "5673de654bdc2d180f8b456d";
@@ -162,7 +166,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(saury, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.jaeger);
+                .export(this.traders.jaeger, questName);
 
             const gkTwoMuzzleBreak = "58272d7f2459774f6311ddfd";
             const electronicComponents = "6389c70ca33d8c4cdf4932c6";
@@ -174,12 +178,13 @@ export class GunsmithBarterHelper
                 .addBarterCost(electronicComponents, 1)
                 .addBarterCost(printedCircuitBoard, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.jaeger);
+                .export(this.traders.jaeger, questName);
         }
     }
 
     public addGunsmithSixBarters(): void
     {
+        const questName = "Gunsmith - Part 6";
         if (this.config.addAttachmentBarters)
         {
             const fortisShift = "59f8a37386f7747af3328f06";
@@ -190,7 +195,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(woodenClock, 1)
                 .addLoyaltyLevel(4)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const akTapcoSawStyleblackPistolGrip = "5947f92f86f77427344a76b1";
             const capacitors = "5c06782b86f77426df5407d2";
@@ -200,7 +205,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(capacitors, 3)
                 .addLoyaltyLevel(2)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const akMagpulPmagMagazine = "59d6272486f77466146386ff";
             const herring = "57347d9c245977448b40fa85";
@@ -210,7 +215,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(4)
                 .addBarterCost(herring, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const akMagpulMoeAkmHandguardFde = "57cffd8224597763b03fc609";
             const bottleOfVodka = "5d40407c86f774318526545a";
@@ -220,7 +225,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(bottleOfVodka, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const akAkedemiaBastionDustCover = "5d2c76ed48f03532f2136169";
             const pevkoLightBeer = "62a09f32621468534a797acb";
@@ -230,7 +235,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(pevkoLightBeer, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const trijiconTA51SightMount = "59db7eed86f77461f8380365";
             this.fluentAssortCreator
@@ -239,7 +244,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(capacitors, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const trijiconAcogTA11D = "59db7e1086f77448be30ddf3";
             const ssdDrive = "590c392f86f77444754deb29";
@@ -249,12 +254,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(ssdDrive, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
         }
     }
 
     public addGunsmithSevenBarters(): void
     {
+        const questName = "Gunsmith - Part 7";
         if (this.config.addAttachmentBarters)
         {
             const krissDefianceStockBlack = "5fbbaa86f9986c4cff3fe5f6";
@@ -267,7 +273,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(nails, 1)
                 .addBarterCost(powerbank, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const magpulMoeSlCarbineLenghtMlokHandguard = "5c78f2792e221600106f4683";
             const wires = "5c06779c86f77426e00dd782";
@@ -279,7 +285,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(wires, 1)
                 .addBarterCost(roundPliers, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const windhamGasBlock = "56ea8d2fd2720b7c698b4570";
             const usbAdapter = "5909e99886f7740c983b9984";
@@ -291,7 +297,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(usbAdapter, 1)
                 .addBarterCost(rechargableBattery, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const danielDefenceVerticalForegripBlack = "651a8bf3a8520e48047bf708";
             const brokenLcd = "5d1b309586f77425227d1676";
@@ -301,7 +307,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(brokenLcd, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const surefireWarCompFlashHider = "5c6d710d2e22165df16b81e7";
             const cyclonRechargableBattery = "5e2aee0a86f774755a234b62";
@@ -311,12 +317,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(cyclonRechargableBattery, 2)
                 .addLoyaltyLevel(2)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
     public addGunsmithEightBarters(): void
     {
+        const questName = "Gunsmith - Part 8";
         if (this.config.addGunBarters)
         {
             const aks74nDefault = this.gunBuilder.getAks74nDefault();
@@ -328,7 +335,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(weaponParts, 1)
                 .addBuyRestriction(2)
                 .addLoyaltyLevel(2)
-                .export(this.traders.prapor);
+                .export(this.traders.prapor, questName);
         }
 
         if (this.config.addAttachmentBarters)
@@ -344,7 +351,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(alyonkaChocolate, 1)
                 .addBarterCost(slickersChocolate, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const ak12Magazine = "5bed61680db834001d2c45ab";
             const pliers = "590c2b4386f77425357b6123";
@@ -354,7 +361,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(pliers, 2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.prapor);
+                .export(this.traders.prapor, questName);
 
             const zenitKleschIksIrIlluminator = "5a5f1ce64f39f90b401987bc";
             const phaseControlRelay = "5d1b313086f77425227d1678";
@@ -364,12 +371,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(phaseControlRelay, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
     public addGunsmithNineBarters(): void
     {
+        const questName = "Gunsmith - Part 9";
         if (this.config.addAttachmentBarters)
         {
             const p226TjCustomCompensator = "5c6beec32e221601da3578f2";
@@ -380,7 +388,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(sparkPlug, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const p226ThreadedBarrel = "587de4282459771bca0ec90b";
             const gPhone = "56742c324bdc2d150f8b456d";
@@ -390,12 +398,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(gPhone, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
         }
     }
 
     public addGunsmithTenBarters(): void
     {
+        const questName = "Gunsmith - Part 10";
         if (this.config.addGunBarters)
         {
             const ak105Default = this.gunBuilder.getAk105Default();
@@ -407,12 +416,11 @@ export class GunsmithBarterHelper
                 .addBarterCost(weaponParts, 2)
                 .addBuyRestriction(1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.prapor);
+                .export(this.traders.prapor, questName);
         }
 
         if (this.config.addAttachmentBarters)
         {
-            const prapor = this.traders.prapor;
             const ak100seriesPolymerHandguard = "5cbda392ae92155f3c17c39f";
             const bolts = "57347c5b245977448d35f6e1";
             const largeBeefStew = "57347da92459774491567cf5";
@@ -425,7 +433,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(bolts, 1)
                 .addBarterCost(largeBeefStew, 1)
                 .addLoyaltyLevel(1)
-                .export(prapor);
+                .export(this.traders.prapor, questName);
 
             const ak100ZenitPtLock = "5ac78eaf5acfc4001926317a";
             const powerCord = "59e36c6f86f774176c10a2a7";
@@ -435,7 +443,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(powerCord, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const akZenitPt1KlassikaStock = "5b222d405acfc400153af4fe";
             const analogThermometer = "5d1b32c186f774252167a530";
@@ -445,12 +453,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(analogThermometer, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
     public addGunsmithEllevenBarters(): void
     {
+        const questName = "Gunsmith - Part 11";
         const lightBulb = "5d1b392c86f77425243e98fe";
         if (this.config.addGunBarters)
         {
@@ -464,7 +473,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addQuestRestriction(vitaminsPartTwoQuest)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
 
         if (this.config.addAttachmentBarters)
@@ -477,7 +486,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(drLupoCoffeeBeans, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const coltCarbineBufferTube = "5649be884bdc2d79388b4577";
             this.fluentAssortCreator
@@ -486,12 +495,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(lightBulb, 2)
                 .addLoyaltyLevel(2)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
     public addGunsmithTwelveBarters(): void
     {
+        const questName = "Gunsmith - Part 12";
         if (this.config.addAttachmentBarters)
         {
             const steinerFlashlight = "5b07dd285acfc4001754240d";
@@ -502,12 +512,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(awl, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
         }
     }
 
     public addGunsmithThirteenBarters(): void
     {
+        const questName = "Gunsmith - Part 13";
         if (this.config.addAttachmentBarters)
         {
             const remingtonRagh4InchRail = "5c0102b20db834001d23eebc";
@@ -518,7 +529,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(metalSpareParts, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const kacFoldingRearSight = "5c1780312e221602b66cc189";
             const zibboLighter = "56742c2e4bdc2d95058b456d";
@@ -528,7 +539,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(zibboLighter, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const kacFoldingFrontSight = "5c17804b2e2216152006c02f";
             this.fluentAssortCreator
@@ -537,7 +548,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(zibboLighter, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const firearmsSkeletonizedStyle01PistolGrip = "6113c3586c780c1e710c90bc";
             const beardOil = "5bc9b9ecd4351e3bac122519";
@@ -549,12 +560,13 @@ export class GunsmithBarterHelper
                 .addBarterCost(beardOil, 1)
                 .addBarterCost(chainlet, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
     public addGunsmithFourteenBarters(): void
     {
+        const questName = "Gunsmith - Part 14";
         if (this.config.addGunBarters)
         {
             const hk416a5Default = this.gunBuilder.getHk416a5Default();
@@ -568,7 +580,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addQuestRestriction(wetJobPartThree)
                 .addLoyaltyLevel(3)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
         }
 
         if (this.config.addAttachmentBarters)
@@ -581,7 +593,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(rechargableBattery, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const magpulMoePistolGrip = "5d15cf3bd7ad1a67e71518b2";
             const powerSupplyUnit = "57347c2e24597744902c94a1";
@@ -591,7 +603,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(powerSupplyUnit, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const magpulUbrGen2StockFde = "5947eab886f77475961d96c5";
             const workingLcd = "5d1b304286f774253763a528";
@@ -601,7 +613,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(workingLcd, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const magpulRvgForegripFde = "5fce0cf655375d18a253eff0";
             const screwdriver = "590c2d8786f774245b1f03f3";
@@ -613,7 +625,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(screwdriver, 1)
                 .addBarterCost(ductTape, 3)
                 .addLoyaltyLevel(3)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const l3HarrisLa5bPeqTacticalDevice = "5c06595c0db834001a66af6c";
             const electronicComponents = "6389c70ca33d8c4cdf4932c6";
@@ -623,7 +635,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(electronicComponents, 1)
                 .addLoyaltyLevel(4)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const magpulFlipUpRearSightFde = "5c18b9192e2216398b5a8104";
             const nippers = "5d40425986f7743185265461";
@@ -633,7 +645,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(nippers, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const magpulFlipUpFrontSightFde = "5c18b90d2e2216152142466b";
             this.fluentAssortCreator
@@ -642,7 +654,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(nippers, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const eoTechExpHolographicSightTan = "558022b54bdc2dac148b458d";
             const toolset = "590c2e1186f77425357b6124";
@@ -652,12 +664,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(toolset, 1)
                 .addLoyaltyLevel(4)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
         }
     }
 
     public addGunsmithFifteenBarters(): void
     {
+        const questName = "Gunsmith - Part 15";
         if (this.config.addGunBarters)
         {
             const asValDefault = this.gunBuilder.getAsValDefault();
@@ -669,7 +682,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(kekTape, 4)
                 .addBuyRestriction(1)
                 .addLoyaltyLevel(4)
-                .export(this.traders.prapor);
+                .export(this.traders.prapor, questName);
         }
         if (this.config.addAttachmentBarters)
         {
@@ -681,7 +694,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(strikeCigarettes, 2)
                 .addLoyaltyLevel(1)
-                .export(this.traders.prapor);
+                .export(this.traders.prapor, questName);
 
             const valZenitB3RingMount = "57a3459f245977764a01f703";
             const goldChain = "5734758f24597738025ee253";
@@ -691,7 +704,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(goldChain, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
@@ -703,6 +716,7 @@ export class GunsmithBarterHelper
 
     public addGunsmithSeventeenBarters(): void
     {
+        const questName = "Gunsmith - Part 17";
         const strikeCigarettes = "5734770f24597738025ee254";
         if (this.config.addGunBarters)
         {
@@ -716,7 +730,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(strikeCigarettes, 2)
                 .addBuyRestriction(1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
         }
 
         if (this.config.addAttachmentBarters)
@@ -728,7 +742,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(strikeCigarettes, 3)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const rpk16BufferTube = "5beec8b20db834001961942a";
             const pliers = "590c2b4386f77425357b6123";
@@ -738,7 +752,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(pliers, 2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const akZenithB10MHandguard = "5648b4534bdc2d3d1c8b4580";
             const dvdDrive = "5734781f24597737e04bf32a";
@@ -750,7 +764,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(dvdDrive, 1)
                 .addBarterCost(nails, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const magpulAfgTacticalForegripOliveDrap = "588226ef24597767af46e39c";
             const phaseControlRelay = "5d1b313086f77425227d1678";
@@ -760,7 +774,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(phaseControlRelay, 2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const zenitKlesch2UTacticalFlashlight = "5b3a337e5acfc4704b4a19a0";
             const lightBulb = "5d1b392c86f77425243e98fe";
@@ -770,7 +784,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(lightBulb, 2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const akCssKnurledChargingHandle = "6130ca3fd92c473c77020dbd";
             const blendTea = "5bc9be8fd4351e00334cae6e";
@@ -780,7 +794,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(blendTea, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const akZenitB33DustCover = "5649af884bdc2d1b2b8b4589";
             const toolset = "590c2e1186f77425357b6124";
@@ -790,12 +804,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(toolset, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 
     public addGunsmithEighteenBarters(): void
     {
+        const questName = "Gunsmith - Part 18";
         if (this.config.addGunBarters)
         {
             const akmnDefault = this.gunBuilder.getAkmnDefault();
@@ -805,7 +820,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(canOfGreenPeas, 4)
                 .addBuyRestriction(2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.prapor);
+                .export(this.traders.prapor, questName);
         }
 
         if (this.config.addAttachmentBarters)
@@ -818,7 +833,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(tarkerDriedMeat, 2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const magpulMlokAfgTacticalForegripBlack = "57cffb66245977632f391a99";
             const ductTape = "57347c1124597737fb1379e3";
@@ -828,7 +843,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(3)
                 .addBarterCost(ductTape, 3)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const magpulZhukovSStock = "5b0e794b5acfc47a877359b2";
             const geigerMullerCounter = "5672cb724bdc2dc2088b456b";
@@ -838,7 +853,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(geigerMullerCounter, 2)
                 .addLoyaltyLevel(4)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const akMagpulMoePistolGrip = "5b30ac585acfc433000eb79c";
             const powerCord = "59e36c6f86f774176c10a2a7";
@@ -848,7 +863,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(powerCord, 2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const eoTechHss1HybridSight = "5c07dd120db834001c39092d";
             const sparkPlug = "590a3c0a86f774385a33c450";
@@ -860,12 +875,13 @@ export class GunsmithBarterHelper
                 .addBarterCost(sparkPlug, 2)
                 .addBarterCost(workingLcd, 1)
                 .addLoyaltyLevel(4)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
         }
     }
 
     public addGunsmithNineteenBarters(): void
     {
+        const questName = "Gunsmith - Part 19";
         if (this.config.addAttachmentBarters)
         {
             const svdsLynxArmsHingeBufferTubeAdapter = "6197b229af1f5202c57a9bea";
@@ -876,7 +892,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(mreRationPack, 1)
                 .addLoyaltyLevel(2)
-                .export(this.traders.jaeger);
+                .export(this.traders.jaeger, questName);
 
             const magpulUbrGen2StockBlack = "5947e98b86f774778f1448bc";
             const bleach = "59e3556c86f7741776641ac2";
@@ -888,7 +904,7 @@ export class GunsmithBarterHelper
                 .addBarterCost(bleach, 1)
                 .addBarterCost(soap, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const svdsRotor43ThreadAdapter = "5e01e9e273d8eb11426f5bc3";
             const wd40Small = "590c5bbd86f774785762df04";
@@ -898,7 +914,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(wd40Small, 2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const rotor43SoundSupressor762x54R = "5e01ea19e9dc277128008c0b";
             const book = "5bc9c049d4351e44f824d360";
@@ -908,7 +924,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(book, 1)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
 
             const marchTacticalFFP30mmRiflescope = "57c5ac0824597754771e88a9";
             const sugar = "59e3577886f774176a362503";
@@ -918,12 +934,13 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(sugar, 3)
                 .addLoyaltyLevel(4)
-                .export(this.traders.jaeger);
+                .export(this.traders.jaeger, questName);
         }
     }
 
     public addGunsmithTwentyBarters(): void
     {
+        const questName = "Gunsmith - Part 20";
         if (this.config.addAttachmentBarters)
         {
             const m1a20RoundMagazine = "5aaf8a0be5b5b00015693243";
@@ -934,7 +951,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(huntingMatches, 2)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const aimpointMicroT1ReflexSight = "58d399e486f77442e0016fe7";
             const zibboLighter = "56742c2e4bdc2d95058b456d";
@@ -944,7 +961,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(3)
                 .addBarterCost(zibboLighter, 2)
                 .addLoyaltyLevel(2)
-                .export(this.traders.peacekeeper);
+                .export(this.traders.peacekeeper, questName);
 
             const aimpointMicroStandardMount = "58d39d3d86f77445bb794ae7";
             const crickentlighter = "56742c284bdc2d98058b456d";
@@ -954,7 +971,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(1)
                 .addBarterCost(crickentlighter, 1)
                 .addLoyaltyLevel(1)
-                .export(this.traders.mechanic);
+                .export(this.traders.mechanic, questName);
 
             const holosunLs321TacticalDevice = "57fd23e32459772d0805bcf1";
             const tarCola = "57514643245977207f2c2d09";
@@ -964,7 +981,7 @@ export class GunsmithBarterHelper
                 .addBuyRestriction(2)
                 .addBarterCost(tarCola, 2)
                 .addLoyaltyLevel(3)
-                .export(this.traders.skier);
+                .export(this.traders.skier, questName);
         }
     }
 }

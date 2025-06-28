@@ -1,5 +1,4 @@
 {
     "addAttachmentBarters": true,
-    "addGunBarters": true,
-    "debugLogging": false
+    "addGunBarters": true
 }
