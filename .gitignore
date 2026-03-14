@@ -1,7 +1,10 @@
-# Visual studio
-.vs
-# build folder
-dist
+# Visual Studio
+.vs/
 
-# Dependency directory
-node_modules
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
