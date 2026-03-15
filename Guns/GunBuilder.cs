@@ -1,16 +1,12 @@
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Utils.Cloners;
-using System.Reflection;
 
 namespace Kipperworks.GunsmithBarters;
 
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
-public class GunBuilder(
-    ModHelper modHelper,
-    ICloner cloner)
+public class GunBuilder(ICloner cloner)
 {
     private GunPreset? _Aks74nDefault;
     private GunPreset? _Ak102Default;
@@ -20,47 +16,32 @@ public class GunBuilder(
     private GunPreset? _Hk416a5Default;
     private GunPreset? _AsValDefault;
 
-    private string? _PathToModValue;
-
-    private string _PathToMod
+    private List<Item> GetOrClonePresetItems(ref GunPreset? cache, Func<GunPreset> factory)
     {
-        get
-        {
-            _PathToModValue ??= modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-            return _PathToModValue;
-        }
-    }
-
-    private List<Item> LoadAndClonePresetItems(ref GunPreset? cache, string path)
-    {
-        if (cache is null)
-        {
-            cache = modHelper.GetJsonDataFromFile<GunPreset>(_PathToMod, path)
-                ?? throw new InvalidOperationException($"Failed to load gun preset: {path}");
-        }
+        cache ??= factory();
 
         return cloner.Clone(cache.Items)
-            ?? throw new InvalidOperationException($"Failed to clone items from gun preset: {path}");
+            ?? throw new InvalidOperationException("Failed to clone items from gun preset");
     }
 
     public List<Item> GetAks74nDefault()
-        => LoadAndClonePresetItems(ref _Aks74nDefault, "db/aks74nDefault.json");
+        => GetOrClonePresetItems(ref _Aks74nDefault, Aks74nDefaultPreset.Create);
 
     public List<Item> GetAk102Default()
-        => LoadAndClonePresetItems(ref _Ak102Default, "db/ak102Default.json");
+        => GetOrClonePresetItems(ref _Ak102Default, Ak102DefaultPreset.Create);
 
     public List<Item> GetAk105Default()
-        => LoadAndClonePresetItems(ref _Ak105Default, "db/ak105Default.json");
+        => GetOrClonePresetItems(ref _Ak105Default, Ak105DefaultPreset.Create);
 
     public List<Item> GetAkmnDefault()
-        => LoadAndClonePresetItems(ref _AkmnDefault, "db/akmnDefault.json");
+        => GetOrClonePresetItems(ref _AkmnDefault, AkmnDefaultPreset.Create);
 
     public List<Item> GetKrissVector9x19Default()
-        => LoadAndClonePresetItems(ref _KrissVector9x19Default, "db/krissVector9x19Default.json");
+        => GetOrClonePresetItems(ref _KrissVector9x19Default, KrissVector9x19DefaultPreset.Create);
 
     public List<Item> GetHk416a5Default()
-        => LoadAndClonePresetItems(ref _Hk416a5Default, "db/hk416a5Default.json");
+        => GetOrClonePresetItems(ref _Hk416a5Default, Hk416a5DefaultPreset.Create);
 
     public List<Item> GetAsValDefault()
-        => LoadAndClonePresetItems(ref _AsValDefault, "db/asValDefault.json");
+        => GetOrClonePresetItems(ref _AsValDefault, AsValDefaultPreset.Create);
 }
