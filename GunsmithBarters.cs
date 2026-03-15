@@ -22,6 +22,12 @@ public class GunsmithBarters(
         var pathToMod = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
         var config = modHelper.GetJsonDataFromFile<GunsmithBartersConfig>(pathToMod, "config/config.json");
 
+        if (config.BarterAddTypes.Count == 0)
+        {
+            logger.Info("[GunsmithBarters] All barter types disabled in config, skipping...");
+            return Task.CompletedTask;
+        }
+
         fluentAssortCreator.SetDebug(config.Debug);
         gunsmithBarterHelper.Initialize(config);
 
@@ -46,7 +52,8 @@ public class GunsmithBarters(
         gunsmithBarterHelper.AddGunsmithNineteenBarters();
         gunsmithBarterHelper.AddGunsmithTwentyBarters();
 
-        logger.Info("[GunsmithBarters] Barters loaded");
+        var barterAddTypeNames = config.BarterAddTypes.Where(x => x.Enabled).Select(x => x.Name);
+        logger.Info($"[GunsmithBarters] Barters loaded - {string.Join(", ", barterAddTypeNames)}");
 
         return Task.CompletedTask;
     }
