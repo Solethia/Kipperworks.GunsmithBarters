@@ -16,16 +16,16 @@ public class FluentTraderAssortCreator(
     ItemHelper itemHelper,
     QuestHelper questHelper)
 {
-    private readonly List<Item> _itemsToSell = [];
-    private readonly Dictionary<string, List<List<BarterScheme>>> _barterScheme = new();
-    private readonly Dictionary<string, int> _loyaltyLevel = new();
-    private readonly List<Quest> _questRestrictions = [];
+    private readonly List<Item> _ItemsToSell = [];
+    private readonly Dictionary<string, List<List<BarterScheme>>> _BarterScheme = [];
+    private readonly Dictionary<string, int> _LoyaltyLevel = new();
+    private readonly List<Quest> _QuestRestrictions = [];
 
-    private bool _debug;
+    private bool _Debug;
 
     public void SetDebug(bool debug)
     {
-        _debug = debug;
+        _Debug = debug;
     }
 
     public FluentTraderAssortCreator CreateSingleAssortItem(MongoId itemTpl, MongoId? itemId = null)
@@ -43,7 +43,7 @@ public class FluentTraderAssortCreator(
             }
         };
 
-        _itemsToSell.Add(newItemToAdd);
+        _ItemsToSell.Add(newItemToAdd);
 
         return this;
     }
@@ -58,7 +58,7 @@ public class FluentTraderAssortCreator(
         upd.UnlimitedCount = false;
         upd.StackObjectsCount = 100;
 
-        _itemsToSell.AddRange(items);
+        _ItemsToSell.AddRange(items);
 
         return this;
     }
@@ -97,14 +97,14 @@ public class FluentTraderAssortCreator(
 
     public FluentTraderAssortCreator AddQuestRestriction(Quest quest)
     {
-        _questRestrictions.Add(quest);
+        _QuestRestrictions.Add(quest);
 
         return this;
     }
 
     public FluentTraderAssortCreator AddLoyaltyLevel(int level)
     {
-        _loyaltyLevel[_itemsToSell[0].Id] = level;
+        _LoyaltyLevel[_ItemsToSell[0].Id] = level;
 
         return this;
     }
@@ -117,7 +117,7 @@ public class FluentTraderAssortCreator(
             Template = currencyType
         };
 
-        if (!_barterScheme.TryAdd(_itemsToSell[0].Id, [[dataToAdd]]))
+        if (!_BarterScheme.TryAdd(_ItemsToSell[0].Id, [[dataToAdd]]))
         {
             logger.Warning($"Unable to add barter scheme currency: {currencyType}");
         }
@@ -127,9 +127,9 @@ public class FluentTraderAssortCreator(
 
     public FluentTraderAssortCreator AddBarterCost(MongoId itemTpl, int count)
     {
-        var sellableItemId = _itemsToSell[0].Id;
+        var sellableItemId = _ItemsToSell[0].Id;
 
-        if (_barterScheme.Count == 0)
+        if (_BarterScheme.Count == 0)
         {
             var dataToAdd = new BarterScheme
             {
@@ -137,18 +137,18 @@ public class FluentTraderAssortCreator(
                 Template = itemTpl
             };
 
-            _barterScheme[sellableItemId] = [[dataToAdd]];
+            _BarterScheme[sellableItemId] = [[dataToAdd]];
         }
         else
         {
-            var existingData = _barterScheme[sellableItemId][0].FirstOrDefault(x => x.Template == itemTpl);
+            var existingData = _BarterScheme[sellableItemId][0].FirstOrDefault(x => x.Template == itemTpl);
             if (existingData is not null)
             {
                 existingData.Count += count;
             }
             else
             {
-                _barterScheme[sellableItemId][0].Add(new BarterScheme
+                _BarterScheme[sellableItemId][0].Add(new BarterScheme
                 {
                     Count = count,
                     Template = itemTpl
@@ -170,10 +170,10 @@ public class FluentTraderAssortCreator(
             return null;
         }
 
-        var itemBeingSold = _itemsToSell[0];
+        var itemBeingSold = _ItemsToSell[0];
         var rootItemAddedId = itemBeingSold.Id;
-        var loyaltyLevel = _loyaltyLevel[rootItemAddedId];
-        var barterSchemes = _barterScheme[rootItemAddedId];
+        var loyaltyLevel = _LoyaltyLevel[rootItemAddedId];
+        var barterSchemes = _BarterScheme[rootItemAddedId];
 
         if (traderData.Assort.Items.Exists(x => x.Id == rootItemAddedId))
         {
@@ -183,14 +183,14 @@ public class FluentTraderAssortCreator(
             return null;
         }
 
-        traderData.Assort.Items.AddRange(_itemsToSell);
+        traderData.Assort.Items.AddRange(_ItemsToSell);
         traderData.Assort.BarterScheme[rootItemAddedId] = barterSchemes;
         traderData.Assort.LoyalLevelItems[rootItemAddedId] = loyaltyLevel;
 
-        if (_questRestrictions.Count > 0)
+        if (_QuestRestrictions.Count > 0)
         {
             var onQuestSuccessAssort = traderData.QuestAssort["success"];
-            foreach (var questRestriction in _questRestrictions)
+            foreach (var questRestriction in _QuestRestrictions)
             {
                 if (questRestriction.Rewards is null)
                 {
@@ -224,7 +224,7 @@ public class FluentTraderAssortCreator(
             }
         }
 
-        if (_debug)
+        if (_Debug)
         {
             LogExport(gunsmithQuestName, traderData, itemBeingSold, loyaltyLevel, barterSchemes);
         }
@@ -235,16 +235,16 @@ public class FluentTraderAssortCreator(
 
     private Upd GetRootItemUpd()
     {
-        return _itemsToSell[0].Upd
+        return _ItemsToSell[0].Upd
             ?? throw new InvalidOperationException("Call CreateSingleAssortItem or CreateComplexAssortItem before modifying item properties.");
     }
 
     private void ClearState()
     {
-        _itemsToSell.Clear();
-        _barterScheme.Clear();
-        _loyaltyLevel.Clear();
-        _questRestrictions.Clear();
+        _ItemsToSell.Clear();
+        _BarterScheme.Clear();
+        _LoyaltyLevel.Clear();
+        _QuestRestrictions.Clear();
     }
 
     private void LogExport(string gunsmithQuestName, Trader trader, Item itemBeingSold, int loyaltyLevel, List<List<BarterScheme>> barterSchemes)
@@ -273,9 +273,9 @@ public class FluentTraderAssortCreator(
 
     private string GetQuestRestrictionInfo()
     {
-        if (_questRestrictions.Count == 0)
+        if (_QuestRestrictions.Count == 0)
             return "";
 
-        return string.Join(", ", _questRestrictions.Select(q => questHelper.GetQuestNameFromLocale(q.Id)));
+        return string.Join(", ", _QuestRestrictions.Select(q => questHelper.GetQuestNameFromLocale(q.Id)));
     }
 }
