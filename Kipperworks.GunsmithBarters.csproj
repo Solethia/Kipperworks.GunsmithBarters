@@ -29,11 +29,18 @@
 
   <Target Name="CreateReleaseZip" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
     <PropertyGroup>
-      <ZipSourceDir>$(OutputPath)</ZipSourceDir>
+      <ZipStagingRoot>bin\$(Configuration)\zip-staging</ZipStagingRoot>
+      <ZipStagingDir>$(ZipStagingRoot)\SPT\user\mods\$(AssemblyName)</ZipStagingDir>
       <ZipDestination>bin\$(Configuration)\$(AssemblyName)-v$(Version).zip</ZipDestination>
     </PropertyGroup>
+    <RemoveDir Directories="$(ZipStagingRoot)" />
+    <ItemGroup>
+      <ZipFiles Include="$(OutputPath)**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(ZipFiles)" DestinationFiles="@(ZipFiles->'$(ZipStagingDir)\%(RecursiveDir)%(Filename)%(Extension)')" />
     <Delete Files="$(ZipDestination)" Condition="Exists('$(ZipDestination)')" />
-    <ZipDirectory SourceDirectory="$(ZipSourceDir)" DestinationFile="$(ZipDestination)" />
+    <ZipDirectory SourceDirectory="$(ZipStagingRoot)" DestinationFile="$(ZipDestination)" />
+    <RemoveDir Directories="$(ZipStagingRoot)" />
     <Message Importance="high" Text="Release ZIP created: $(ZipDestination)" />
   </Target>
 
