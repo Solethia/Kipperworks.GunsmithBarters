@@ -914,7 +914,7 @@ public class GunsmithBarterHelper(
                 .Export(TraderIds.Mechanic, questName);
 
             var rotor43SoundSupressor762x54R = "5e01ea19e9dc277128008c0b";
-            var book = "5bc9c049d4351e3bac122519";
+            var book = "5bc9c049d4351e44f824d360";
             fluentAssortCreator
                 .CreateSingleAssortItem(rotor43SoundSupressor762x54R)
                 .AddUnlimitedStackCount()
