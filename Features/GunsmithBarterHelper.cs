@@ -917,6 +917,19 @@ public class GunsmithBarterHelper(
     public void AddGunsmithNineteenBarters()
     {
         var questName = "Gunsmith - Part 19";
+        if (_Config.AddGunBarters)
+        {
+            var svds = gunBuilder.GetSVDS762x54RSniperRifleDefault();
+            fluentAssortCreator.CreateComplexAssortItem(svds)
+                .AddUnlimitedStackCount()
+                .AddBarterCost(ItemIds.LVNDMARKS_RAT_POISON, 1)
+                .AddBarterCost(ItemIds.BLEACH, 1)
+                .AddBarterCost(ItemIds.ALKALINE_CLEANER_FOR_HEAT_EXCHANGERS, 1)
+                .AddBuyRestriction(2)
+                .AddLoyaltyLevel(3)
+                .Export(TraderIds.PRAPOR, questName);
+        }
+
         if (_Config.AddAttachmentBarters)
         {
             fluentAssortCreator

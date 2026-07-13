@@ -1,6 +1,6 @@
 namespace Kipperworks.GunsmithBarters;
 
-public static class QuestIds
+internal static class QuestIds
 {
     public const string MISSING_CARGO = "6179b4f16e9dd54ac275e407";
     public const string GUNSMITH_PART_TWO = "5ac2426c86f774138762edfe";

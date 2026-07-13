@@ -1,6 +1,6 @@
 namespace Kipperworks.GunsmithBarters;
 
-public static class TraderIds
+internal static class TraderIds
 {
     public const string PRAPOR = "54cb50c76803fa8b248b4571";
     public const string SKIER = "58330581ace78e27b8b10cee";

@@ -17,6 +17,7 @@ public class GunBuilder(ICloner cloner)
     private GunPreset? _AsValDefault;
     private GunPreset? _Glock17Default;
     private GunPreset? _OrsisT5000Default;
+    private GunPreset? _SVDS762x54RSniperRifleDefault;
 
     private List<Item> GetOrClonePresetItems(ref GunPreset? cache, Func<GunPreset> factory)
     {
@@ -52,4 +53,7 @@ public class GunBuilder(ICloner cloner)
 
     public List<Item> GetOrsisT5000Default()
         => GetOrClonePresetItems(ref _OrsisT5000Default, OrsisT5000DefaultPreset.Create);
+
+    public List<Item> GetSVDS762x54RSniperRifleDefault()
+        => GetOrClonePresetItems(ref _SVDS762x54RSniperRifleDefault, SVDS762x54RSSniperRiflePreset.Create);
 }
