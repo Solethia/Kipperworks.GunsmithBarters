@@ -1,0 +1,15 @@
+Third-Party Software Notice
+===========================
+
+This project contains code copied from or derived from the following open-source project:
+
+  Project: SPT Forge Verification Engine
+  Repository: https://github.com/sp-tarkov/forge
+  License: Mozilla Public License 2.0 (MPL 2.0)
+  Copyright: (c) SP-Tarkov Contributors
+
+Copied Files:
+  - All files in the Forge.Verifier directory are copied from the SPT Forge Verification Engine project.
+
+The original code remains governed by the MPL 2.0 license.
+A copy of the MPL 2.0 license is included in the LICENSE file in this project root.

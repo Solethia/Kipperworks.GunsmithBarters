@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - Kipperworks.GunsmithBarters.csproj
+      - Kipperworks.GunsmithBarters/Kipperworks.GunsmithBarters.csproj
     types:
       - closed
 
@@ -32,17 +32,20 @@ jobs:
         id: version
         shell: pwsh
         run: |
-          [xml]$project = Get-Content 'Kipperworks.GunsmithBarters.csproj'
+          # Point to the new subfolder path
+          $projectPath = 'Kipperworks.GunsmithBarters/Kipperworks.GunsmithBarters.csproj'
+          [xml]$project = Get-Content $projectPath
           $projectVersion = $project.Project.PropertyGroup.Version
 
           if ([string]::IsNullOrWhiteSpace($projectVersion))
           {
-              throw 'The project version could not be read from Kipperworks.GunsmithBarters.csproj.'
+              throw "The project version could not be read from $projectPath."
           }
 
           $tagName = "v$projectVersion"
 
-          $zipPath = "bin/Release/Kipperworks.GunsmithBarters-v$projectVersion.zip"
+          # Update the zip path to match where the build output lives relative to the project/repo root
+          $zipPath = "Kipperworks.GunsmithBarters/bin/Release/Kipperworks.GunsmithBarters-v$projectVersion.zip"
 
           "version=$projectVersion" >> $env:GITHUB_OUTPUT
           "tag_name=$tagName" >> $env:GITHUB_OUTPUT
@@ -65,11 +68,11 @@ jobs:
 
       - name: Restore
         if: steps.tag-check.outputs.exists == 'false'
-        run: dotnet restore Kipperworks.GunsmithBarters.csproj
+        run: dotnet restore Kipperworks.GunsmithBarters/Kipperworks.GunsmithBarters.csproj
 
       - name: Build release package
         if: steps.tag-check.outputs.exists == 'false'
-        run: dotnet build Kipperworks.GunsmithBarters.csproj -c Release --no-restore --nologo --verbosity minimal
+        run: dotnet build Kipperworks.GunsmithBarters/Kipperworks.GunsmithBarters.csproj -c Release --no-restore --nologo --verbosity minimal
 
       - name: Verify release asset
         if: steps.tag-check.outputs.exists == 'false'

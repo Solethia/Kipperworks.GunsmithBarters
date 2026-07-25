@@ -179,3 +179,7 @@ This repository includes a GitHub Actions workflow that builds and publishes a r
 2. Open and merge a pull request into `main`.
 
 After the pull request is merged, the workflow reads the project version, creates a matching git tag, builds the Release configuration, and uploads `bin/Release/Kipperworks.GunsmithBarters-v{version}.zip` to a GitHub Release. This only runs for pull requests that change `Kipperworks.GunsmithBarters.csproj`. If the matching tag already exists, the workflow skips creating a duplicate release.
+
+## Special Thanks
+- @RuKira for helping me get started
+- @Tosox Fixed build config for non-x64 / Linux compatibility.
