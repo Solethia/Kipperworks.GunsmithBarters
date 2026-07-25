@@ -1,8 +1,7 @@
 using FluentAssertions;
-using Kipperworks.GunsmithBarters;
 using SPTarkov.Server.Core.Models.Spt.Mod;
 
-namespace GunsmithBarters.Tests;
+namespace Kipperworks.GunsmithBarters.Tests;
 
 public class ModMetadataTests
 {
