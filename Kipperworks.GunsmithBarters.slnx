@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="Kipperworks.GunsmithBarters.csproj" />
+  <Project Path="Kipperworks.GunsmithBarters.Tests/Kipperworks.GunsmithBarters.Tests.csproj" />
+  <Project Path="Kipperworks.GunsmithBarters/Kipperworks.GunsmithBarters.csproj" />
 </Solution>
