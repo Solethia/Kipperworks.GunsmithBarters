@@ -1,6 +1,6 @@
 namespace Kipperworks.GunsmithBarters;
 
-public static class ItemIds
+internal static class ItemIds
 {
     public const string PLASTIC_PISTOL_GRIP = "56083a334bdc2dc8488b4571";
     public const string RAM_STICK = "57347baf24597738002c6178";
@@ -171,4 +171,6 @@ public static class ItemIds
     public const string INSULATING_TAPE = "5734795124597738002c6176";
     public const string SAS_DRIVE = "590c37d286f77443be3d7827";
     public const string DAMAGED_HARD_DRIVE = "590a386e86f77429692b27ab";
+    public const string LVNDMARKS_RAT_POISON = "60b0f561c4449e4cb624c1d7";
+    public const string ALKALINE_CLEANER_FOR_HEAT_EXCHANGERS = "59faf98186f774067b6be103";
 }
